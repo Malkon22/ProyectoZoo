@@ -9,7 +9,6 @@ public class Constantes {
             "comida TEXT, " +
             "frecuencia TEXT, " +
             "habitat TEXT)";
-
     
 public static final String SENTENCIAPERSONAL = "CREATE TABLE Personal (" +
         "nombre TEXT, " +

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/etNombrePersonal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="Nombre del empleado" />
+
+        <EditText
+            android:id="@+id/etCargo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cargo" />
+
+        <EditText
+            android:id="@+id/etTurno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Turno (ej. Mañana/Tarde)" />
+
+        <EditText
+            android:id="@+id/etTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Teléfono de contacto" />
+
+        <Button
+            android:id="@+id/btnGuardarPersonal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar Personal"
+            android:backgroundTint="@color/black" />
+
+        <Button
+            android:id="@+id/btnVerPersonal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ver Lista de Personal"
+            android:backgroundTint="@color/black" />
+
+        <TextView
+            android:id="@+id/tvMensajePersonal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp"
+            android:layout_marginTop="30dp" />
+
+        <ListView
+            android:id="@+id/lvPersonal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

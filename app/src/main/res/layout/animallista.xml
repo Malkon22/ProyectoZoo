@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/etNombreAnimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="Nombre del animal" />
+
+        <EditText
+            android:id="@+id/etEspecie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Especie" />
+
+        <EditText
+            android:id="@+id/etComida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tipo de comida" />
+
+        <EditText
+            android:id="@+id/etFrecuencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Frecuencia de alimentación" />
+
+        <EditText
+            android:id="@+id/etHabitat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Hábitat" />
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar Animal"
+            android:backgroundTint="@color/black"/>
+
+        <Button
+            android:id="@+id/btnVerAnimales"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ver Lista de Animales"
+            android:backgroundTint="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvMensaje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp"
+            android:layout_marginTop="30dp"/>
+
+        <ListView
+            android:id="@+id/lvAnimales"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">ZooTrek</string>
+    <string name="tituloinicial">ZooTrek</string>
+    <string name="descripcion1">desc_imagenZootrek</string>
+    <string name="botonsiguiente">Siguiente</string>
+    <string name="botonvolver">Volver</string>
+    <string name="botoniniciarsesion">Iniciar Sesion</string>
+    <string name="botonmenuprincipal">Menu Principal</string>
+    <string name="descimageninicio">desc_imageninicio</string>
+    <string name="botonmapa">Mapa</string>
+    <string name="botoncomplementos">Complementos</string>
+    <string name="botoncomprarboletos">Compra Boletos</string>
+    <string name="botoninformacion">informacion</string>
+    <string name="imageninicio">desc_imageninicio2</string>
+    <string name="titulomapa">Mapa</string>
+    <string name="mapa1">Ubicacion de los Animales</string>
+    <string name="mapa2">Restaurantes</string>
+    <string name="mapa3">Tiendas</string>
+    <string name="mapa4">Baños</string>
+    <string name="titulocomplementos">Complementos</string>
+    <string name="complemento1">Aprender Sobre Animales</string>
+    <string name="complemento2">Pon a Prueba tu Conocimiento</string>
+    <string name="complemento3">Juegos</string>
+    <string name="titulocompradeboletos">Compra de Boletos</string>
+    <string name="compra1">Metodo de Compra</string>
+    <string name="compra2">Punto:</string>
+    <string name="compra3">Fisico</string>
+    <string name="compra4">Digital</string>
+    <string name="tituloinformacion">Informacion</string>
+    <string name="info1">Apertura del Zoologico</string>
+    <string name="info2">Calendario</string>
+    <string name="info3">Notificaciones</string>
+    <string name="iniciarsesion">Iniciar Sesion</string>
+    <string name="Nombrecompleto">Nombre de Usuario</string>
+    <string name="contraseñainiciosesion">Contraseña</string>
+</resources>

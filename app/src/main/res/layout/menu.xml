@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Model.Menu">
+
+
+
+    <Button
+        android:id="@+id/btniniciarsesion3"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:text="@string/botonmapa"
+        android:layout_gravity="center"
+        android:layout_marginTop="150sp"
+        android:backgroundTint="@color/verde"/>
+    <Button
+        android:id="@+id/btniniciarsesion4"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="@string/botoncomplementos"
+        android:layout_gravity="center"
+        android:layout_marginTop="50sp"
+        android:backgroundTint="@color/verde"/>
+    <Button
+        android:id="@+id/btniniciarsesion5"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="@string/botoncomprarboletos"
+        android:layout_gravity="center"
+        android:layout_marginTop="50sp"
+        android:backgroundTint="@color/verde"/>
+    <Button
+        android:id="@+id/btniniciarsesion6"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="@string/botoninformacion"
+        android:layout_gravity="center"
+        android:layout_marginTop="50sp"
+        android:backgroundTint="@color/verde"/>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/descimageninicio"
+        android:src="@drawable/tucaninicio" />
+    <Button
+        android:id="@+id/btnvolver2"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:text="@string/botonvolver"
+        android:backgroundTint="@color/verde"/>
+</LinearLayout>

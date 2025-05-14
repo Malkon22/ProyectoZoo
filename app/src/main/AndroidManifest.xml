@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ZooTrek"
+        tools:targetApi="31">
+        <activity
+            android:name=".Model.ListarDatos"
+            android:exported="false" />
+        <activity
+            android:name=".Model.Personal"
+            android:exported="false" />
+        <activity
+            android:name=".Model.AnimalInterfaz"
+            android:exported="false" />
+        <activity
+            android:name=".Model.AnimalLista"
+            android:exported="false" />
+        <activity
+            android:name=".Model.IniciarSesion"
+            android:exported="false" />
+        <activity
+            android:name=".Model.Informacion"
+            android:exported="false" />
+        <activity
+            android:name=".Model.MetodosCompra"
+            android:exported="false" />
+        <activity
+            android:name=".Model.Complementos"
+            android:exported="false" />
+        <activity
+            android:name=".Model.Mapa"
+            android:exported="false" />
+        <activity
+            android:name=".Model.Menu"
+            android:exported="false" />
+        <activity
+            android:name=".Model.MenuInicio"
+            android:exported="false" />
+        <activity
+            android:name=".Controller.Inicio"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

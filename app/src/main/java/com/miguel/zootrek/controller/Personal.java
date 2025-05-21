@@ -1,10 +1,11 @@
-package com.miguel.zootrek.Model;
+package com.miguel.zootrek.controller;
 
 import android.os.Bundle;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.miguel.zootrek.Empleado;
+import com.miguel.zootrek.model.Empleado;
+import com.miguel.zootrek.model.ManagerDb;
 import com.miguel.zootrek.R;
 import java.util.ArrayList;
 

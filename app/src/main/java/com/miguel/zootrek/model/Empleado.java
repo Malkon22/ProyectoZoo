@@ -1,4 +1,4 @@
-package com.miguel.zootrek;
+package com.miguel.zootrek.model;
 
 public class Empleado {
 

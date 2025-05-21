@@ -1,12 +1,12 @@
-package com.miguel.zootrek.Model;
+package com.miguel.zootrek.model;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
-
-import com.miguel.zootrek.Empleado;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -14,6 +14,7 @@ public class ManagerDb {
 
     ConexionHelper conexionHelper;
     SQLiteDatabase db;
+
 
     public ManagerDb(Context context) {
         conexionHelper = new ConexionHelper(context);
@@ -26,7 +27,6 @@ public class ManagerDb {
     public void openBdRd() {
         db = conexionHelper.getReadableDatabase();
     }
-
     public long insertAdministrador(Animal animal) {
         openBdWr();
         ContentValues values = new ContentValues();
@@ -37,7 +37,7 @@ public class ManagerDb {
         values.put("habitat", animal.getHabitat());
 
         Log.d("DB_INSERT", "Insertando animal: " + animal.toString());
-        long result = db.insert("Administrador", null, values);
+        long result = db.insert("Administradores", null, values);
         if (result == -1) {
             Log.e("DB_ERROR", "Error al insertar animal: " + animal.toString());
         }
@@ -48,7 +48,7 @@ public class ManagerDb {
     public ArrayList<Animal> listarAnimales() {
         openBdRd();
         ArrayList<Animal> lista = new ArrayList<>();
-        Cursor cursor = db.rawQuery("SELECT * FROM Administrador", null);
+        Cursor cursor = db.rawQuery("SELECT * FROM Administradores", null);
 
         if (cursor.moveToFirst()) {
             do {

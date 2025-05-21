@@ -1,4 +1,4 @@
-package com.miguel.zootrek.Model;
+package com.miguel.zootrek.controller;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,7 +7,6 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.miguel.zootrek.Controller.Inicio;
 import com.miguel.zootrek.R;
 
 public class MenuInicio extends AppCompatActivity {

@@ -1,14 +1,17 @@
-package com.miguel.zootrek.Model;
+package com.miguel.zootrek.controller;
 
 import android.os.Bundle;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.miguel.zootrek.model.Animal;
+import com.miguel.zootrek.model.ManagerDb;
 import com.miguel.zootrek.R;
 import java.util.ArrayList;
 
 public class AnimalLista extends AppCompatActivity {
     EditText etNombreAnimal, etEspecie, etComida, etFrecuencia, etHabitat;
-    Button btnAgregar, btnContContar;
+    Button btnAgregar, btnVerLista;
     TextView tvResultado;
     ListView lvAnimales;
 
@@ -28,7 +31,7 @@ public class AnimalLista extends AppCompatActivity {
         etFrecuencia = findViewById(R.id.etFrecuencia);
         etHabitat = findViewById(R.id.etHabitat);
         btnAgregar = findViewById(R.id.btnGuardar);
-        btnContContar = findViewById(R.id.btnVerAnimales);
+        btnVerLista = findViewById(R.id.btnVerAnimales);
         tvResultado = findViewById(R.id.tvMensaje);
         lvAnimales = findViewById(R.id.lvAnimales);
 
@@ -44,18 +47,19 @@ public class AnimalLista extends AppCompatActivity {
             String frecuencia = etFrecuencia.getText().toString();
             String habitat = etHabitat.getText().toString();
 
-            Animal animal = new Animal(nombre, especie, comida, frecuencia, habitat);
-            long resul = managerDb.insertAdministrador(animal);
+            if (nombre.isEmpty() || especie.isEmpty() || comida.isEmpty() || frecuencia.isEmpty() || habitat.isEmpty()) {
+                Toast.makeText(this, "Completa todos los campos", Toast.LENGTH_SHORT).show();
+                return;
+            }
 
-            if (resul > 0) {
-                Toast.makeText(this, "Animal insertado correctamente", Toast.LENGTH_SHORT).show();
-                textoAnimales.clear();
-                for (Animal a : managerDb.listarAnimales()) {
-                    textoAnimales.add(a.toString());
-                }
-                adapter.notifyDataSetChanged();
+            Animal animal = new Animal(frecuencia,nombre, especie, comida, habitat);
+            long resultado = managerDb.insertAdministrador(animal);
+
+            if (resultado > 0) {
+                Toast.makeText(this, "Animal guardado", Toast.LENGTH_SHORT).show();
+                actualizarLista();
             } else {
-                Toast.makeText(this, "Error al insertar animal", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Error al guardar", Toast.LENGTH_SHORT).show();
             }
 
             etNombreAnimal.setText("");
@@ -65,9 +69,16 @@ public class AnimalLista extends AppCompatActivity {
             etHabitat.setText("");
         });
 
-        btnContContar.setOnClickListener(v -> {
-            int total = managerDb.listarAnimales().size();
-            tvResultado.setText("Total de animales registrados: " + total);
-        });
+        btnVerLista.setOnClickListener(v -> actualizarLista());
+    }
+
+    private void actualizarLista() {
+        textoAnimales.clear();
+        for (Animal a : managerDb.listarAnimales()) {
+            textoAnimales.add(a.toString());
+        }
+        adapter.notifyDataSetChanged();
+
+        tvResultado.setText("Total de animales: " + textoAnimales.size());
     }
 }

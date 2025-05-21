@@ -1,4 +1,4 @@
-package com.miguel.zootrek.Controller;
+package com.miguel.zootrek.controller;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,20 +7,19 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.miguel.zootrek.Model.MenuInicio;
 import com.miguel.zootrek.R;
 
-public class Inicio extends AppCompatActivity {
+public class IniciarSesion extends AppCompatActivity {
     Button btnNext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.inicio);
-        btnNext = findViewById(R.id.btnSiguiente);
+        setContentView(R.layout.iniciarsesion);
+        btnNext = findViewById(R.id.btnsiguiente22);
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent irsiguiente = new Intent(Inicio.this, MenuInicio.class);
+                Intent irsiguiente = new Intent(IniciarSesion.this, AnimalInterfaz.class);
                 startActivity(irsiguiente);
 
             }

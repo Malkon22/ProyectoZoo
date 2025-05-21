@@ -1,4 +1,4 @@
-package com.miguel.zootrek.Model;
+package com.miguel.zootrek.controller;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;

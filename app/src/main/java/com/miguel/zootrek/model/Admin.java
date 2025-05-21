@@ -1,4 +1,4 @@
-package com.miguel.zootrek.Model;
+package com.miguel.zootrek.model;
 
 public class Admin {
     private String nombre;

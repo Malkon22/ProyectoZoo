@@ -1,4 +1,4 @@
-package com.miguel.zootrek.Model;
+package com.miguel.zootrek.controller;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -6,6 +6,8 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.miguel.zootrek.model.Animal;
+import com.miguel.zootrek.model.ManagerDb;
 import com.miguel.zootrek.R;
 
 import java.util.ArrayList;
@@ -22,7 +24,7 @@ public class ListarDatos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listardatos);
 
-        listView = findViewById(R.id.lvanimaless);
+        listView = findViewById(R.id.lvAnimales);
 
         managerDb = new ManagerDb(this);
         listaAnimal = managerDb.listarAnimales();

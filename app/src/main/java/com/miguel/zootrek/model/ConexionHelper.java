@@ -1,4 +1,4 @@
-package com.miguel.zootrek.Model;
+package com.miguel.zootrek.model;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

@@ -1,4 +1,4 @@
-package com.miguel.zootrek.Model;
+package com.miguel.zootrek.controller;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,18 +9,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.miguel.zootrek.R;
 
-public class Mapa extends AppCompatActivity {
+public class MetodosCompra extends AppCompatActivity {
     Button btnNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mapa);
-        btnNext = findViewById(R.id.btnvolver3);
+        setContentView(R.layout.metodoscompra);
+        btnNext = findViewById(R.id.btnvolver5);
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent volver = new Intent(Mapa.this, MenuInicio.class);
+                Intent volver = new Intent(MetodosCompra.this, Menu.class);
                 startActivity(volver);
 
             }

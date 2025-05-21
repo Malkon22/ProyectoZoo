@@ -1,4 +1,4 @@
-package com.miguel.zootrek.Model;
+package com.miguel.zootrek.controller;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,21 +9,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.miguel.zootrek.R;
 
-public class Informacion extends AppCompatActivity {
+public class Inicio extends AppCompatActivity {
     Button btnNext;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.informacion);
-        btnNext = findViewById(R.id.btnvolver7);
+        setContentView(R.layout.inicio);
+        btnNext = findViewById(R.id.btnSiguiente);
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent volver = new Intent(Informacion.this, Menu.class);
-                startActivity(volver);
+                Intent irsiguiente = new Intent(Inicio.this, MenuInicio.class);
+                startActivity(irsiguiente);
 
             }
         });
+
+
+
     }
 }
